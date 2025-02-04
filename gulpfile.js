@@ -39,7 +39,7 @@ function replaceOldStyle() {
             .src(['*.html', '**/*.html'])
             .pipe(replace('/wp-includes/js/jquery/jquery.min.js', ''))
             .pipe(replace('/wp-includes/js/jquery/jquery-migrate.min.js', ''))
-            .pipe(replace('<img ', '<img class="lazyload"'))
+            .pipe(replace('<img ', '<img loading="lazy" '))
             .pipe(gulp.dest('.'))
     )
 }
