@@ -4,83 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a5a4d8-8f3c-4a69-8c17-eb740c2f7fa7" name="Changes" comment="force lazy loading">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a-concept-for-generating-random-seeds-with-ai-on-light-weight-devices/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/a-concept-for-generating-random-seeds-with-ai-on-light-weight-devices/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/album-liverpool-august-2023/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/album-liverpool-august-2023/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/album-manchester-august-2023/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/album-manchester-august-2023/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/album-manchester-june-2024/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/album-manchester-june-2024/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/album-manchester-october-2023/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/album-manchester-october-2023/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/album-stockport-august-2023/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/album-stockport-august-2023/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/islay/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/islay/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/islay/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/islay/page/1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/islay/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/islay/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author/islay/page/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/author/islay/page/3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/page/1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/page/3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/page/3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookshelf/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookshelf/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/photography/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/category/photography/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/projects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/category/projects/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/projects/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/category/projects/page/1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/projects/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/category/projects/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/uncategorised/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/category/uncategorised/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/uncategorized/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/category/uncategorized/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crt-boot-animation-css/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/crt-boot-animation-css/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css-only-responsive-navigation-menu/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/css-only-responsive-navigation-menu/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuba-shows-the-world-how-a-democracy-and-the-family-co-exist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cuba-shows-the-world-how-a-democracy-and-the-family-co-exist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv-contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cv-contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/auto-draft-2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/auto-draft-2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/auto-draft-3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/auto-draft-3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/auto-draft-4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/auto-draft-4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/auto-draft/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/auto-draft/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/breakfast-250101/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/breakfast-250101/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/breakfast-250102/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/breakfast-250102/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/dinner-250101/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/dinner-250101/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/dinner-250102/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/dinner-250102/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/page/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/page/1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/page/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/page/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/snack-250101-2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/snack-250101-2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/snack-250101/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/snack-250101/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/snack-250102/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/snack-250102/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/snack-25101/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/snack-25101/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/supper-241231/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food/supper-241231/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forced-to-care-about-internet-explorer-lazy-loading/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/forced-to-care-about-internet-explorer-lazy-loading/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gesture-based-controls-for-obs-studio-in-virtual-reality/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gesture-based-controls-for-obs-studio-in-virtual-reality/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/github/index.html" afterDir="false" />
+    <list default="true" id="22a5a4d8-8f3c-4a69-8c17-eb740c2f7fa7" name="Changes" comment="fix autofill typo">
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image-alt-scraping-for-accessibility-reporting/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/image-alt-scraping-for-accessibility-reporting/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/micro/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro/nopod-ipod-twopod/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/micro/nopod-ipod-twopod/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro/php-8-4-is-my-new-best-friend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/micro/php-8-4-is-my-new-best-friend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro/pixel-art-is-fun-im-not-any-good-but-im-having-fun/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/micro/pixel-art-is-fun-im-not-any-good-but-im-having-fun/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/morphological-understanding-and-root-word-highlighting-in-bionic-reading-assistive-tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/morphological-understanding-and-root-word-highlighting-in-bionic-reading-assistive-tools/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newcastle-august-2023/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/newcastle-august-2023/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-symbol-support-x/badges.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-symbol-support-x/badges.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-to-string-tag-x/badges.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-to-string-tag-x/badges.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photo-feature-manchester-portico-library/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/photo-feature-manchester-portico-library/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photography/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/photography/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/photos-from-pozan-poland-kodak-gold-400/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/photos-from-pozan-poland-kodak-gold-400/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/problematic-uranium/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/problematic-uranium/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-update-concept-for-monitoring-and-understanding-component-use-on-production-systems-2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-update-concept-for-monitoring-and-understanding-component-use-on-production-systems-2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-update-concept-for-monitoring-and-understanding-component-use-on-production-systems/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-update-concept-for-monitoring-and-understanding-component-use-on-production-systems/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-update-ootd-recent-developments/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-update-ootd-recent-developments/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shes-starting-more-projects-after-loosing-momentum-on-previous-projects-because-they-were-actually-quite-complex-and-this-one-should-be-completed-rather-quick/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/shes-starting-more-projects-after-loosing-momentum-on-previous-projects-because-they-were-actually-quite-complex-and-this-one-should-be-completed-rather-quick/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spam-is-for-sandwiches-not-seo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/spam-is-for-sandwiches-not-seo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/cms/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/cms/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/componentwatch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/componentwatch/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/css/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/css/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/javascript/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/php/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/php/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/politics/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/politics/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/project/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/web-management/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tag/web-management/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/walton-prison-prison-fit-for-scousers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/walton-prison-prison-fit-for-scousers/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems-copy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems-copy/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +78,7 @@
       <workItem from="1738698510590" duration="121000" />
       <workItem from="1738698639358" duration="100000" />
       <workItem from="1738701395791" duration="6545000" />
-      <workItem from="1738710980273" duration="1616000" />
+      <workItem from="1738710980273" duration="1841000" />
     </task>
     <task id="LOCAL-00001" summary="init push">
       <option name="closed" value="true" />
@@ -219,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738712686702</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix autofill typo">
+      <option name="closed" value="true" />
+      <created>1738712808310</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738712808310</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +177,7 @@
     <MESSAGE value="workflow actually fixed" />
     <MESSAGE value="fixed photos" />
     <MESSAGE value="force lazy loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="force lazy loading" />
+    <MESSAGE value="fix autofill typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix autofill typo" />
   </component>
 </project>
