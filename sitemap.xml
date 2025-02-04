@@ -2,7 +2,7 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
 		<loc>/post-sitemap.xml</loc>
-		<lastmod>2025-02-04T18:54:07+00:00</lastmod>
+		<lastmod>2025-02-04T23:20:30+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>/page-sitemap.xml</loc>
@@ -18,7 +18,7 @@
 	</sitemap>
 	<sitemap>
 		<loc>/category-sitemap.xml</loc>
-		<lastmod>2025-02-04T18:54:07+00:00</lastmod>
+		<lastmod>2025-02-04T23:20:30+00:00</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>/post_tag-sitemap.xml</loc>

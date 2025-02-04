@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>/blogs/</loc>
-		<lastmod>2025-02-04T18:54:07+00:00</lastmod>
+		<lastmod>2025-02-04T23:20:30+00:00</lastmod>
 	</url>
 	<url>
 		<loc>/walton-prison-prison-fit-for-scousers/</loc>
@@ -400,13 +400,23 @@
 		</image:image>
 	</url>
 	<url>
+		<loc>/spam-is-for-sandwiches-not-seo/</loc>
+		<lastmod>2025-02-04T18:54:07+00:00</lastmod>
+		<image:image>
+			<image:loc>/wp-content/uploads/2024/11/Spam_wall_-_Flickr_-_freezelight-e1737819869907-1.avif</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>/wp-content/uploads/2024/11/image-2.png</image:loc>
+		</image:image>
+	</url>
+	<url>
 		<loc>/project-update-ootd-recent-developments/</loc>
-		<lastmod>2025-01-25T22:00:40+00:00</lastmod>
+		<lastmod>2025-02-04T23:20:30+00:00</lastmod>
 		<image:image>
 			<image:loc>/wp-content/uploads/2025/01/Screenshot-2025-01-25-at-21.48.09-png-e1737841806929.avif</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2025/01/ootd.islayanderson.co_.uk_feed-png-e1737840925512.avif</image:loc>
+			<image:loc>/wp-content/uploads/2025/01/ootd.islayanderson.co_.uk_feed-png-e1737840925512-1.avif</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>/wp-content/uploads/2025/01/ootd.islayanderson.co_.uk_user_islay-png.avif</image:loc>
@@ -416,16 +426,6 @@
 		</image:image>
 		<image:image>
 			<image:loc>/wp-content/uploads/2025/01/image-png.avif</image:loc>
-		</image:image>
-	</url>
-	<url>
-		<loc>/spam-is-for-sandwiches-not-seo/</loc>
-		<lastmod>2025-02-04T18:54:07+00:00</lastmod>
-		<image:image>
-			<image:loc>/wp-content/uploads/2024/11/Spam_wall_-_Flickr_-_freezelight-e1737819869907-1.avif</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>/wp-content/uploads/2024/11/image-2.png</image:loc>
 		</image:image>
 	</url>
 </urlset>
