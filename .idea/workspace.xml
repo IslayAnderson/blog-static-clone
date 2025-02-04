@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a5a4d8-8f3c-4a69-8c17-eb740c2f7fa7" name="Changes" comment="workflow actually fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookshelf/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookshelf/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-update-ootd-recent-developments/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project-update-ootd-recent-developments/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap_index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap_index.xml" afterDir="false" />
+    <list default="true" id="22a5a4d8-8f3c-4a69-8c17-eb740c2f7fa7" name="Changes" comment="fixed photos">
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +78,7 @@
       <workItem from="1738698510590" duration="121000" />
       <workItem from="1738698639358" duration="100000" />
       <workItem from="1738701395791" duration="6545000" />
-      <workItem from="1738710980273" duration="594000" />
+      <workItem from="1738710980273" duration="1491000" />
     </task>
     <task id="LOCAL-00001" summary="init push">
       <option name="closed" value="true" />
@@ -134,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738710384286</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed photos">
+      <option name="closed" value="true" />
+      <created>1738711791301</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738711791301</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +159,7 @@
     <MESSAGE value="build file and gitignore" />
     <MESSAGE value="workflow fixed" />
     <MESSAGE value="workflow actually fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="workflow actually fixed" />
+    <MESSAGE value="fixed photos" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed photos" />
   </component>
 </project>
