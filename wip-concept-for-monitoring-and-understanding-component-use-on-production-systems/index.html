@@ -1,0 +1,966 @@
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Concept for monitoring and understanding component use on production systems - Islay Anderson Blog</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		
+		<link rel="pingback" href="/xmlrpc.php">
+
+				<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v24.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<link rel="canonical" href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Concept for monitoring and understanding component use on production systems - Islay Anderson Blog">
+	<meta property="og:description" content="watch the project repository for testing updates Introduction When taking on the codebase for an existing monolithic website that tightly integrated with the processes and policies of organisation like those seen in the public sector its important to get a map and full understanding of where and how components placed on the website.Modern and well... Read more &raquo;">
+	<meta property="og:url" content="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/">
+	<meta property="og:site_name" content="Islay Anderson Blog">
+	<meta property="article:published_time" content="2023-11-07T00:38:50+00:00">
+	<meta property="article:modified_time" content="2024-11-09T01:28:23+00:00">
+	<meta property="og:image" content="/wp-content/uploads/2024/03/IMG_2818-scaled-e1711157855491.jpeg">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="750">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="islay">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@islayAnderson">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="islay">
+	<script type="application/ld+json" class="yoast-schema-graph">{
+	    "@context": "https://schema.org",
+	    "@graph": [
+	        {
+	            "@type": "WebPage",
+	            "@id": "/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/",
+	            "url": "/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/",
+	            "name": "Concept for monitoring and understanding component use on production systems - Islay Anderson Blog",
+	            "isPartOf": {
+	                "@id": "/#website"
+	            },
+	            "primaryImageOfPage": {
+	                "@id": "/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#primaryimage"
+	            },
+	            "image": {
+	                "@id": "/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#primaryimage"
+	            },
+	            "thumbnailUrl": "/wp-content/uploads/2024/03/IMG_2818-scaled-e1711157855491.jpeg",
+	            "datePublished": "2023-11-07T00:38:50+00:00",
+	            "dateModified": "2024-11-09T01:28:23+00:00",
+	            "author": {
+	                "@id": "/#/schema/person/7da64179231992e2987b9ed689a66ad6"
+	            },
+	            "breadcrumb": {
+	                "@id": "/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#breadcrumb"
+	            },
+	            "inLanguage": "en-US",
+	            "potentialAction": [
+	                {
+	                    "@type": "ReadAction",
+	                    "target": [
+	                        "/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/"
+	                    ]
+	                }
+	            ]
+	        },
+	        {
+	            "@type": "ImageObject",
+	            "inLanguage": "en-US",
+	            "@id": "/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#primaryimage",
+	            "url": "/wp-content/uploads/2024/03/IMG_2818-scaled-e1711157855491.jpeg",
+	            "contentUrl": "/wp-content/uploads/2024/03/IMG_2818-scaled-e1711157855491.jpeg",
+	            "width": 1000,
+	            "height": 750
+	        },
+	        {
+	            "@type": "BreadcrumbList",
+	            "@id": "/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#breadcrumb",
+	            "itemListElement": [
+	                {
+	                    "@type": "ListItem",
+	                    "position": 1,
+	                    "name": "Home",
+	                    "item": "/"
+	                },
+	                {
+	                    "@type": "ListItem",
+	                    "position": 2,
+	                    "name": "All Blog posts",
+	                    "item": "/blogs/"
+	                },
+	                {
+	                    "@type": "ListItem",
+	                    "position": 3,
+	                    "name": "Concept for monitoring and understanding component use on production systems"
+	                }
+	            ]
+	        },
+	        {
+	            "@type": "WebSite",
+	            "@id": "/#website",
+	            "url": "/",
+	            "name": "Islay Anderson Blog",
+	            "description": "London based Web Developer Photography, Engineering, Politics, Art",
+	            "potentialAction": [
+	                {
+	                    "@type": "SearchAction",
+	                    "target": {
+	                        "@type": "EntryPoint",
+	                        "urlTemplate": "/?s={search_term_string}"
+	                    },
+	                    "query-input": {
+	                        "@type": "PropertyValueSpecification",
+	                        "valueRequired": true,
+	                        "valueName": "search_term_string"
+	                    }
+	                }
+	            ],
+	            "inLanguage": "en-US"
+	        },
+	        {
+	            "@type": "Person",
+	            "@id": "/#/schema/person/7da64179231992e2987b9ed689a66ad6",
+	            "name": "islay",
+	            "image": {
+	                "@type": "ImageObject",
+	                "inLanguage": "en-US",
+	                "@id": "/#/schema/person/image/",
+	                "url": "https://secure.gravatar.com/avatar/23d54e843462c0a4673b24bd57a188d7?s=96&d=mm&r=g",
+	                "contentUrl": "https://secure.gravatar.com/avatar/23d54e843462c0a4673b24bd57a188d7?s=96&d=mm&r=g",
+	                "caption": "islay"
+	            },
+	            "sameAs": [
+	                "https://x.com/islayAnderson"
+	            ],
+	            "url": "/author/islay/"
+	        }
+	    ]
+	}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="alternate" type="application/rss+xml" title="Islay Anderson Blog &raquo; Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="Islay Anderson Blog &raquo; Comments Feed" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Islay Anderson Blog &raquo; Concept for monitoring and understanding component use on production systems Comments Feed" href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍⬛","🐦​⬛")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="/styles/css/style.min.css" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}</style>
+<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<style id="dominant-color-styles-inline-css" type="text/css">img[data-dominant-color]:not(.has-transparency) { background-color: var(--dominant-color); }</style>
+<link rel="stylesheet" id="enlighterjs-css" href="/styles/css/enlighterjs.min.css?ver=GvpnWK%2FHbvHJqZT" type="text/css" media="all">
+<link rel="stylesheet" id="stylesheet-css" href="/styles/css/main.css" type="text/css" media="all">
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/215">
+<link rel="shortlink" href="/?p=215">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2Fwip-concept-for-monitoring-and-understanding-component-use-on-production-systems%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2Fwip-concept-for-monitoring-and-understanding-component-use-on-production-systems%2F#038;format=xml">
+<meta name="generator" content="dominant-color-images 1.2.0">
+<meta name="generator" content="Site Kit by Google 1.145.0">
+<meta name="generator" content="performance-lab 3.8.0; plugins: dominant-color-images, speculation-rules">
+<meta name="generator" content="speculation-rules 1.4.0">
+<link rel="icon" href="/wp-content/uploads/2024/11/512-150x150.png" sizes="32x32">
+<link rel="icon" href="/wp-content/uploads/2024/11/512-300x300.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/wp-content/uploads/2024/11/512-300x300.png">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2024/11/512-300x300.png">
+		
+				
+	</head>
+
+	<body class="govuk-template__body js-enabled govuk-frontend-supported govuk-body post-template-default single single-post postid-215 single-format-standard " itemscope itemtype="http://schema.org/WebPage">
+	<script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+		
+	<header class="govuk-header" data-module="govuk-header">
+		<div class="govuk-header__container govuk-width-container">
+			<div class="govuk-header__logo">
+				<a href="#" class="govuk-header__link govuk-header__link--homepage"> </a>
+			</div>
+			<div class="govuk-header__content">
+				<a href="/" class="govuk-header__link govuk-header__service-name">Islay Anderson Blog</a>
+				<nav aria-label="Menu" class="govuk-header__navigation">
+					<button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>
+					Menu
+					</button>
+						<ul id="menu-main-menu" class="govuk-header__navigation-list">
+<li id="menu-item-811" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-811 govuk-header__navigation-item"><a href="/" class="govuk-header__link">Home</a></li>
+<li id="menu-item-812" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-812 govuk-header__navigation-item"><a href="https://photography-portfolio.islayanderson.co.uk/" class="govuk-header__link">Photography</a></li>
+<li id="menu-item-813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813 govuk-header__navigation-item"><a href="/micro/" class="govuk-header__link">Micro blogs</a></li>
+<li id="menu-item-814" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-814 govuk-header__navigation-item"><a href="/blogs/" class="govuk-header__link">Blog posts</a></li>
+<li id="menu-item-815" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-815 govuk-header__navigation-item"><a href="mailto:me@islayanderson.co.uk" class="govuk-header__link">Contact Me</a></li>
+<li id="menu-item-816" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-816 govuk-header__navigation-item"><a href="/wp-content/uploads/2025/01/Islay-Anderson-CV-260124-hurt-me-plenty.pdf" class="govuk-header__link">Latest CV</a></li>
+</ul>					
+				</nav>
+			</div>
+		</div>
+	</header><div class="govuk-width-container">
+<a href="/" class="govuk-back-link">Back</a>
+	<main class="govuk-main-wrapper ">
+		<div class="govuk-grid-row govuk-width-container">
+			<div class="govuk-grid-column-full-width">
+								
+				<article id="post-215" class="cf post-215 post type-post status-publish format-standard has-post-thumbnail hentry category-projects tag-cms tag-componentwatch tag-css tag-javascript tag-php tag-project tag-web-management" role="article">
+					
+					<h1 class="govuk-heading-l"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/" rel="bookmark" title="Concept for monitoring and understanding component use on production systems">Concept for monitoring and understanding component use on production systems</a></h1>
+					<div class="govuk-inset-text">
+					Posted <time class="updated entry-time" datetime="2023-11-07" itemprop="datePublished">November 7, 2023</time> <span class="by">by</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">islay</span>	
+					</div>
+											<div class="featured">
+							<img width="905" height="679" src="/wp-content/uploads/2024/03/IMG_2818-1024x768.jpeg" class="attachment-large size-large wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="/wp-content/uploads/2024/03/IMG_2818-1024x768.jpeg 1024w, /wp-content/uploads/2024/03/IMG_2818-300x225.jpeg 300w, /wp-content/uploads/2024/03/IMG_2818-768x576.jpeg 768w, /wp-content/uploads/2024/03/IMG_2818-1536x1152.jpeg 1536w, /wp-content/uploads/2024/03/IMG_2818-2048x1536.jpeg 2048w, /wp-content/uploads/2024/03/IMG_2818-scaled-e1711157855491.jpeg 1000w" sizes="(max-width: 905px) 100vw, 905px">						</div>
+										<section>
+						
+<p>watch the project repository for testing updates </p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/IslayAnderson/ComponentWatch">ComponentWatcher</a></div>
+</div>
+
+
+
+<h2 class="wp-block-heading">Introduction</h2>
+
+
+
+<p>When taking on the codebase for an existing monolithic website that tightly integrated with the processes and policies of organisation like those seen in the public sector its important to get a map and full understanding of where and how components placed on the website.<br>Modern and well integrated CMS&#8217;s to some degree have solved this problem but in the scenario many of us face ourselves in we are taking on a code base held together with figurative bailing wire and duct tape built on decades of old outdated technologies.</p>
+					</section>
+
+				</article>
+				<h2 class="govuk-heading-m">Comments:</h2>
+				  	<div id="comment-2344" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/e7efd1019744ff58a8452b8974cd5d36" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://rant.li/gmnqyyybu/a-href-40-118-145-212-bbs-home-php" class="url" rel="ugc external nofollow">戸塚記念 追い切り</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2344">February 1st, 2025 </a></time>
+			<p>A ton of amateurs are getting disheartened knowing this reality, as there are bunches of things that one ought to be taught and ace.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2348" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/4e07d69fae43d94c6b0a8bc078e70c13" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://ytkjytr.blogspot.com/2025/01/hk598q6l6.html" class="url" rel="ugc external nofollow">新幹線パーサー廃止</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2348">February 1st, 2025 </a></time>
+			<p>SONIA (Sterling In a single day Index Common) is the effective reference for in a single day listed swaps for unsecured transactions within the Sterling market.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2353" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/55be93eee94e9cf23e4dbc7aee9429c4" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://tj62b5yilp4it.gallery.ru/" class="url" rel="ugc external nofollow">過労 死 について</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2353">February 1st, 2025 </a></time>
+			<p>The techniques to make the shapes of your alternative, nonetheless, might be restricted, especially in case you adhere to at least one method or style of origami.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2358" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/d72ce48ea197965e3fbae1b5bc39e6e4" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://postheaven.net/c7apsq46v8" class="url" rel="ugc external nofollow">淡々と 例文</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2358">February 1st, 2025 </a></time>
+			<p>By switching to a 3rd social gathering logistics agency, companies can save a lot.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2360" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/13b1fb22e36e9eee43156e3da24f1c06" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.sutori.com/en/story/untitled--X4P57dtPVPNLepaZkwiaMNjT" class="url" rel="ugc external nofollow">大竹市 放送</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2360">February 1st, 2025 </a></time>
+			<p>The Chartered Financial Analyst (CFA) designation is sometimes compared to a Masters in Finance.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2363" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/9ed593abf5128380a6fd1d598878b09d" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://photoclub.canadiangeographic.ca/profile/21491756" class="url" rel="ugc external nofollow">大分 銀行 店 番号</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2363">February 1st, 2025 </a></time>
+			<p>The perfect online store incorporates all of the peppiest jewellery one needs to stay trendy.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2364" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/5802cb90c92bad34754b4056689e1abb" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://photoclub.canadiangeographic.ca/profile/21491356" class="url" rel="ugc external nofollow">好きな人に冗談を言う</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2364">February 1st, 2025 </a></time>
+			<p>However it’s not the tip of the world if it simply doesn’t work out; don’t go ripping all of it apart to make it lay down.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2367" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/4e0ff3831e5388b6d3b10a97dd21b9be" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="http://www.uyal-after.xyz/blog/1737701885157" class="url" rel="ugc external nofollow">ミネベア株価</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2367">February 1st, 2025 </a></time>
+			<p>Ehlers-Danlos Syndrome is rare, and patients diagnosed with EDS should stay under a doctor&#8217;s care in order to deal with their specific symptoms.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2370" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/acbcb9a8a86b6269b069c2a201c64392" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://zenwriting.net/ynnl9z9pdx" class="url" rel="ugc external nofollow">deloitte 株価</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2370">February 1st, 2025 </a></time>
+			<p>Baanah and his brother Rechab had been both captains over Ishbosheth&#8217;s troops.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2376" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/0c7305e169e908901820211b27ea1324" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://hfdahdfhag.blogspot.com/2025/01/HtkpnK.html" class="url" rel="ugc external nofollow">今日 の 料理 お 菓子</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2376">February 1st, 2025 </a></time>
+			<p>In case you started a Common Credit score claim by thirteen November 2023 and you are waiting for a decision, you&#8217;ll be able to nonetheless get the price of Dwelling Payment.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2377" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/ecbea57e1a64bddce97c0c913470432b" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="http://www.wyzt-degree.xyz/blog/1737794405839" class="url" rel="ugc external nofollow">米国 コロナ</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2377">February 1st, 2025 </a></time>
+			<p>We haven’t won a game and every sport is going to be fully different, however extremely difficult.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2380" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/869d04b4db3b36e57ec83ed9faee42e6" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://designaddict.com/community/profile/kTLcha" class="url" rel="ugc external nofollow">白地図ぬりぬり</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2380">February 1st, 2025 </a></time>
+			<p>It sits about one-third of the distance from Center Metropolis, Philadelphia to Midtown Manhattan; it&#8217;s situated 5.Eight miles (9.3 km) south of the state capital Trenton, 27 miles (43 km) northeast of Middle City Philadelphia, and fifty four miles (87 km) southwest of recent York Metropolis.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2382" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/1d7493f08a0e95fe6a8077f1cb750929" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="http://www.serve-esuy.xyz/blog/1737792907997" class="url" rel="ugc external nofollow">sbi fx 出金 いつ</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2382">February 1st, 2025 </a></time>
+			<p>In simple terms, these bodies do not hold any say to interrupt a user&#8217;s transaction or freeze Bitcoin accounts.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2387" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/e6e0731722abb3a5c697ce94988cf85a" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.divephotoguide.com/user/llnuruwjtdcajvhajt" class="url" rel="ugc external nofollow">ハイラックス荷室</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2387">February 1st, 2025 </a></time>
+			<p>The dynamics of stock trading has undergone a serious shift and now traders are monitoring the market, fluctuation of stocks and movement of index straight away from the devices and tablets.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2388" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/884df6c7eaa36c6a67a6539532732a34" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.outdoorproject.com/users/vruncvhc-xurycmm" class="url" rel="ugc external nofollow">自信 満々 ことわざ</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2388">February 1st, 2025 </a></time>
+			<p>Unlike the $50 that your friend wheedles from you, bonds are marketable.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2389" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/0bdb357bb40ea2b7281108730d5837c9" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.divephotoguide.com/user/dbejvglgtjjggbo" class="url" rel="ugc external nofollow">介護 保険 レセプト 請求</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2389">February 1st, 2025 </a></time>
+			<p>If you place an object like a rotor blade in the path of that wind, the wind will push on it, transferring some of its own energy of motion to the blade.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2390" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/35058dbbf6c7e4d366bcb89bd1597971" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://xrgkyhnhoikre.blogspot.com/2025/01/C8pMaJ8.html" class="url" rel="ugc external nofollow">絶対 言い換え</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2390">February 1st, 2025 </a></time>
+			<p>Indeed, many get recognition without having thought about that, they just went for the motivation to be known, or, at least, to pay the bills.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2397" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/70952811d5249054713e9c6bc784ede2" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://designaddict.com/community/profile/lsfRVW" class="url" rel="ugc external nofollow">配当 金 計算 書 書式</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2397">February 1st, 2025 </a></time>
+			<p>The effects of the price of the stocks are seen in the organizational structures of the association.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2399" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/d72ce48ea197965e3fbae1b5bc39e6e4" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.laundrynation.com/community/profile/vwa/" class="url" rel="ugc external nofollow">男 まぐろ</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2399">February 1st, 2025 </a></time>
+			<p>Make sure you make the proper method to the buyers as the best method and right perspective both are vital in enterprise capital raising.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2402" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/789b538d5c2543505f9219c55883e6c7" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://divisionmidway.org/jobs/author/yeqpmife/" class="url" rel="ugc external nofollow">まとめたニュース</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2402">February 1st, 2025 </a></time>
+			<p>Along with that, a DMC has people with the knowledge of visa necessities and all of the paperwork related to travelling to help the overseas delegates.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2405" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/0e70fcf31c5bf7d90f9c247a35bd2460" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.sutori.com/en/story/untitled--Zd4iymkzVmBL9cWyNgfjEJSC" class="url" rel="ugc external nofollow">二方向避難 倉庫</a>: </span> 			<time datetime="2025-02-1"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2405">February 1st, 2025 </a></time>
+			<p>With Fuser, Sussman believed that many players of their games have a wide range of musical tastes, as well desirous to have more management of how they interact with their music, thus enabling them to be inventive with their tastes.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2409" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/793f4e6168773825293b2dd362f38393" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://rqwesdgf.blogspot.com/2025/01/5fhqck3i.html" class="url" rel="ugc external nofollow">日経平均 全銘柄 株価</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2409">February 2nd, 2025 </a></time>
+			<p>Since 1974, seven Nobel Prizes have been given to economists for, among other things, work crucial of some variations of the Phillips curve.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2410" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/c34a24b48852b3dc1641b839cf2f46af" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.laundrynation.com/community/profile/cjjxfsk/" class="url" rel="ugc external nofollow">見えなくもない 英語</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2410">February 2nd, 2025 </a></time>
+			<p>The Compatibility Test Unfold is a six-card tarot unfold that explores shared values, emotional connections, and areas of progress in your new love.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2411" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/97d4fcdbe4e40f98ed6c71f0f86ede8e" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://postheaven.net/i1r19f03nf" class="url" rel="ugc external nofollow">証券会社 つぶれたら</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2411">February 2nd, 2025 </a></time>
+			<p>The tender-start equipment helps to forestall this.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2414" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/67ea94c4387d21523e64b2de2cc34f75" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://postheaven.net/pilr6h7spv" class="url" rel="ugc external nofollow">サクソバンク証券 評判 米国株</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2414">February 2nd, 2025 </a></time>
+			<p>How do vegetarians get sufficient protein?</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2415" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/8645d22d4d4ff451fcce9fdc829f0bd8" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://tvchrist.ning.com/profile/YhAWjSa" class="url" rel="ugc external nofollow">はしご車 写真</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2415">February 2nd, 2025 </a></time>
+			<p>The SEM was recently promoted from the status of corresponding exchange to that of affiliated securities markets within the Fed茅ration Internationale des Bourses de Valeurs (FIBV) and it is also a founding member of the African Stock Exchange Association (ASEA).</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2416" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/71b78cd345fb199ae7df244192c16d53" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://postheaven.net/i19hphae2z" class="url" rel="ugc external nofollow">延岡市 居酒屋</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2416">February 2nd, 2025 </a></time>
+			<p>You can upload a photo from your computer or other device, or you can point to an image that is already on the net.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2418" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/f86ed658d3d0d095ec047c4246277dda" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="http://www.economic-xfry.xyz/blog/1737701870705" class="url" rel="ugc external nofollow">円の中 の 三角形 角度 高校</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2418">February 2nd, 2025 </a></time>
+			<p>First, the international banks announced to regulate mortgage low cost at the extent of 50-80; The Chinese native banks (钱庄) and Chinese Merchants Bank adopted.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2419" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/884df6c7eaa36c6a67a6539532732a34" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://designaddict.com/community/profile/iTdvto" class="url" rel="ugc external nofollow">看護師 資格 スキルアップ</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2419">February 2nd, 2025 </a></time>
+			<p>The figures occupy the upper, two sections with their names inscribed above and within the decrease part under the saints identify are vignettes of ladies learning totally different topics.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2420" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/397d0af8f11ec531626e90c23f612d51" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://zenwriting.net/ioyse4jdnc" class="url" rel="ugc external nofollow">テレビ東京番組表過去</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2420">February 2nd, 2025 </a></time>
+			<p>Sterling being amongst the first members.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2429" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/6b29b39f6139acc33de912ac49d024a8" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://designaddict.com/community/profile/PxMRmA" class="url" rel="ugc external nofollow">四国女子旅ホテル</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2429">February 2nd, 2025 </a></time>
+			<p>Organizing a conference or a meeting includes lots of planning.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2430" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/3a9c953ff56c2835016edb6f4af516e4" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="http://www.decide-hwisl.xyz/blog/1736268658530" class="url" rel="ugc external nofollow">海外 旅行 日本 人</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2430">February 2nd, 2025 </a></time>
+			<p>Upon the dying of Lawrence&#8217;s widow Anne, George Washington inherited the estate at Mount Vernon.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2435" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/884df6c7eaa36c6a67a6539532732a34" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="http://www.zkelz-fund.xyz/blog/1737794397286" class="url" rel="ugc external nofollow">単色イラスト</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2435">February 2nd, 2025 </a></time>
+			<p>It could be the identical for reverse processes and requirements.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2436" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/5220ae800dcfa46f8dc1cf4b085d62a3" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://designaddict.com/community/profile/AfrYjOu" class="url" rel="ugc external nofollow">やらなかった 言い換え</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2436">February 2nd, 2025 </a></time>
+			<p>Gross sales continued at a great tempo and Kaiser Jeep reported an operating revenue of $11.1 million for 1964 on record gross sales of $255,582,000.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2437" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/b8685e0175a49f6fad8759d39ed10337" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="http://www.stage-lphj.xyz/blog/1737792894480" class="url" rel="ugc external nofollow">近年 の 地震</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2437">February 2nd, 2025 </a></time>
+			<p>Conservative investors who cannot tolerate wide swings in stock price can invest in stocks that have low volatility.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2438" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/08b9daf2b1a85b6270026d87415d34a5" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://vw9wt8e1804.blogspot.com/2025/01/CZnFoLEwx.html" class="url" rel="ugc external nofollow">うさぎ表情</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2438">February 2nd, 2025 </a></time>
+			<p>The calming effect of nature can help reduce stress, anxiety, and symptoms of depression.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2440" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/f840729b18085819d4ab976dd78b3d99" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://designaddict.com/community/profile/kbnaRZl" class="url" rel="ugc external nofollow">大阪杯 2023結果</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2440">February 2nd, 2025 </a></time>
+			<p>Marrok &#8211; Marrok was a former humanoid Jedi who lost his religion to the Jedi and turned an Inquisitor after the rise of the Empire.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2442" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/6928208b13e0bcd389a1e5fb593f7d79" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://designaddict.com/community/profile/doNkhQu" class="url" rel="ugc external nofollow">刻が見えるユニコーン</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2442">February 2nd, 2025 </a></time>
+			<p>How about the fact so many people don&#8217;t have jobs or money to invest in stocks.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2444" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/062f3cb0e03bcc181bf9813aac567558" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://zenwriting.net/ybw1n11oyk" class="url" rel="ugc external nofollow">労働保険名称所在地変更届</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2444">February 2nd, 2025 </a></time>
+			<p>If the taxes are overpaid, you do get some money back, but this isn&#8217;t necessarily a great thing: It could mean that your property value went down.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2451" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/e9911b11e7cff973659895e1f5a9a6a5" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://photoclub.canadiangeographic.ca/profile/21487564" class="url" rel="ugc external nofollow">見積書 人件費 書き方</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2451">February 2nd, 2025 </a></time>
+			<p>Rental properties are also a great way to find extra income.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2453" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/14b916bfb41a70f736b8a853a2e52007" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://ryjjr.blogspot.com/2025/01/WDOIAYa.html" class="url" rel="ugc external nofollow">藤田淑子 死因</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2453">February 2nd, 2025 </a></time>
+			<p>It was revealed that there have been roughly 9,000 constructive COVID-19 exams not yet logged on the HSE&#8217;s IT systems, because of each limitations within the software program; and lack of staff to test and enter details, meaning there was an efficient ceiling of roughly 1,seven-hundred to 2,000 circumstances that could be logged every day.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2455" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/4aabd39b166a050435bd0aa76a5420a1" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.divephotoguide.com/user/xdmfvvyskfdbifwrgum" class="url" rel="ugc external nofollow">寝てるとき ビクッとなる</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2455">February 2nd, 2025 </a></time>
+			<p>Surroundings: Real time 3D fashions, sprites.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2459" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/0c7305e169e908901820211b27ea1324" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://designaddict.com/community/profile/MUbTYS" class="url" rel="ugc external nofollow">四字熟語 時間を大切に</a>: </span> 			<time datetime="2025-02-2"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2459">February 2nd, 2025 </a></time>
+			<p>53 Camp Forgotten, The CCC in Michigan, by Wm.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2467" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/2718b4789124d2d7a5274c308034ba9d" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://kaeuchi.jp/forums/users/iipaqyyvi/" class="url" rel="ugc external nofollow">自賠責 保険 支払 われ ない場合</a>: </span> 			<time datetime="2025-02-3"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2467">February 3rd, 2025 </a></time>
+			<p>As we speak, we fudge that quantity a bit &#8212; you&#8217;ll hear people within the tech industry say it&#8217;s each 18 to 24 months.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2488" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/7ee9b9db9fff954fd07d2155251dbad9" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.laundrynation.com/community/profile/uvw/" class="url" rel="ugc external nofollow">中学生ゲイセックス</a>: </span> 			<time datetime="2025-02-3"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2488">February 3rd, 2025 </a></time>
+			<p>1993: Brian Clarke: Designs on Architecture, Oldham Art Gallery, Oldham.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2489" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/057293a45c797a1469a38e6de82833c3" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://postheaven.net/thronw4f93" class="url" rel="ugc external nofollow">9513 配当 いつ</a>: </span> 			<time datetime="2025-02-3"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2489">February 3rd, 2025 </a></time>
+			<p>This can lead to a nightmare of smoothing to take away the debris.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2491" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/5ec6a5617f4c0bc68458706ad368ce92" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="http://www.ryxag-scientist.xyz/blog/1736268523480" class="url" rel="ugc external nofollow">リーフラス 愚痴</a>: </span> 			<time datetime="2025-02-3"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2491">February 3rd, 2025 </a></time>
+			<p>He was a retired farmer and a member of the Luther First Christian Church.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2495" class="comment odd alt thread-odd thread-alt depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/221089fff91fb984457ca847fb1724f0" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://cadillacsociety.com/users/kWSOjKVI" class="url" rel="ugc external nofollow">大晦日ディズニー</a>: </span> 			<time datetime="2025-02-3"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2495">February 3rd, 2025 </a></time>
+			<p>If you’re in the temper to broaden your type vocabulary, then give her a follow.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+  	<div id="comment-2509" class="comment even thread-even depth-1 cf">
+		<div class="govuk-inset-text">
+						<img src="http://www.gravatar.com/avatar/c22348da875be3fd2f9c9569a5a408d7" class="load-gravatar avatar avatar-48 photo" height="40" width="40">
+			<span><a href="https://www.laundrynation.com/community/profile/xmk/" class="url" rel="ugc external nofollow">濃い眉毛 英語</a>: </span> 			<time datetime="2025-02-4"><a href="/wip-concept-for-monitoring-and-understanding-component-use-on-production-systems/#comment-2509">February 4th, 2025 </a></time>
+			<p>45th and 46th Streets.</p>
+		</div>
+					  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Your comment is awaiting moderation.    </strong>
+  </div>
+  			</div>
+
+				<div id="respond" class="comment-respond">
+					<h3 id="reply-title" class="comment-reply-title">Leave a Reply 
+						<small>
+							<a rel="nofollow" id="cancel-comment-reply-link" href="/socialchaff-an-exercise-in-obfuscation-by-hiding-in-plain-sight/#respond" style="display:none;">Cancel reply</a>
+						</small>
+					</h3>
+					<form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+						<div class="govuk-form-group">
+							<label class="govuk-label" for="more-detail">Comment</label>
+							<textarea class="govuk-textarea" id="comment" name="comment" rows="5" aria-describedby="more-detail-hint"></textarea>
+						</div> 
+						<div class="govuk-form-group">
+							<label class="govuk-label" for="full-name">User name</label>
+							<input class="govuk-input" id="author" name="author" type="text" spellcheck="false" autocomplete="name">
+						</div>
+						<div class="govuk-form-group">
+							<label class="govuk-label" for="email">Email address</label>
+							<input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+						</div>
+						<div class="govuk-form-group">
+							<label class="govuk-label" for="email">Website</label>
+							<input class="govuk-input" id="url" name="url" type="text" spellcheck="false" autocomplete="url">
+						</div>
+						<input name="submit" type="submit" id="submit" class="govuk-button" data-module="govuk-button" value="Post Comment">
+						<input type="hidden" name="comment_post_ID" value="215" id="comment_post_ID">
+						<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						
+					</form>	
+				</div>
+
+				
+					
+							</div>
+		</div>
+	</main>
+</div>
+
+			<footer class="govuk-footer">
+				<div class="govuk-width-container">
+					<div class="govuk-footer__meta">
+						<div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+							<div id="sidebar1" role="complementary">
+
+	
+		<div class="no-widgets">
+			<p>This is a widget ready area. Add some and they will appear here.</p>
+		</div>
+
+	
+</div>
+							<h2 class="govuk-visually-hidden"><!-- widget --></h2>
+							<ul class="govuk-footer__inline-list">
+															</ul>
+							<span class="govuk-footer__licence-description"><!-- widget --></span>
+						</div>
+						<div class="govuk-footer__meta-item">
+							<a class="govuk-footer__link govuk-footer__copyright-logo">© 2025 Islay Anderson Blog</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+			
+		<script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/govuk-gds_wordpress_theme\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prerender"}}]},"eagerness":"moderate"}]}</script>
+<script type="text/javascript" src="/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=GvpnWK%2FHbvHJqZT" id="enlighterjs-js"></script>
+<script type="text/javascript" id="enlighterjs-js-after">
+/* <![CDATA[ */
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":true,"textOverflow":"break","linenumbers":true,"theme":"atomic","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/govuk-gds_wordpress_theme/assets/js/all.bundle.js?ver=6.7.1" id="bundle-js"></script>
+<script type="module" src="/wp-content/themes/govuk-gds_wordpress_theme/assets/js/govuk-frontend.min.js?ver=6.7.1"></script>		<script type="module">import { initAll } from '/wp-content/themes/govuk-gds_wordpress_theme/assets/js/govuk-frontend.min.js'
+			initAll()</script>
+
+	</body>

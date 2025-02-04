@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<meta http-equiv="refresh" content="0;url=/wp-content/themes/govuk-gds_wordpress_theme/assets/fonts/bold-affa96571d-v2.woff">
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.location = "/wp-content/themes/govuk-gds_wordpress_theme/assets/fonts/bold-affa96571d-v2.woff";
+		</script>
+
+		<p>You are being redirected to <a href="/wp-content/themes/govuk-gds_wordpress_theme/assets/fonts/bold-affa96571d-v2.woff">/wp-content/themes/govuk-gds_wordpress_theme/assets/fonts/bold-affa96571d-v2.woff</a></p>
+	</body>
+</html>
