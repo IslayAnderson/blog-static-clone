@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>Redirecting...</title>
-		<meta http-equiv="refresh" content="0;url=/wp-content/themes/govuk-gds_wordpress_theme/assets/images/govuk-crest-2x.png">
+		<meta http-equiv="refresh" content="0;url=/wp-content/themes/ukgov-gds-blog-child/assets/images/govuk-crest-2x.png">
 	</head>
 	<body>
 		<script type="text/javascript">
-			window.location = "/wp-content/themes/govuk-gds_wordpress_theme/assets/images/govuk-crest-2x.png";
+			window.location = "/wp-content/themes/ukgov-gds-blog-child/assets/images/govuk-crest-2x.png";
 		</script>
 
-		<p>You are being redirected to <a href="/wp-content/themes/govuk-gds_wordpress_theme/assets/images/govuk-crest-2x.png">/wp-content/themes/govuk-gds_wordpress_theme/assets/images/govuk-crest-2x.png</a></p>
+		<p>You are being redirected to <a href="/wp-content/themes/ukgov-gds-blog-child/assets/images/govuk-crest-2x.png">/wp-content/themes/ukgov-gds-blog-child/assets/images/govuk-crest-2x.png</a></p>
 	</body>
 </html>
